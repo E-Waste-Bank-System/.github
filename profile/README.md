@@ -138,7 +138,7 @@ cd ../frontend-admin && npm run dev
 
 | Name | Role |
 |------|------|
-| Axel David | Ewaste Classification Model Developer and Backend |
+| Axel David | Classification Model Developer and Backend Engineer |
 | Aldo Nitehe Lase | Regression Model Developer and Mobile App Developer |
 | Farhan Rizki Fauzi | UI/UX Designer |
                                 
