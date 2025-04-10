@@ -19,7 +19,7 @@ A smart e-waste collection and management system powered by AI-based classificat
 |---------|-------|------------|
 | REST API | Express + TypeScript | Google Cloud Run |
 | AI Inference | Python + YOLOv11/PT | Google Cloud Run |
-| Admin Web | Nuxt 3 + Tailwind CSS | Vercel / Cloudflare |
+| Admin Web | Nuxt 3 + Tailwind CSS | App Engine |
 | Auth & DB | Supabase (PostgreSQL) | Supabase Cloud |
 | File Storage | Google Cloud Storage | GCS Buckets |
 
