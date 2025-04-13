@@ -6,10 +6,10 @@ A smart e-waste collection and management system powered by AI-based classificat
 
 ```
 /bank-sampah-elektronik
-├── backend/                # REST API (TypeScript + Express)
-├── frontend-admin/         # Admin dashboard (Nuxt 3)
-├── ai-models/              # Python scripts for YOLO & regression
-├── infra/                  # Deployment configs (Docker, Cloud Run)
+├── ebs-api/                                     # REST API (TypeScript + Express)
+├── ebs-web/                                     # Admin dashboard (Svelte 5)
+├── ebs-app/                                     # Mobile Application (Kotlin)
+├── object-classification-models/                # E-waste Classification Models (YOLOv11)
 └── README.md               # This file
 ```
 
@@ -19,7 +19,7 @@ A smart e-waste collection and management system powered by AI-based classificat
 |---------|-------|------------|
 | REST API | Express + TypeScript | Google Cloud Run |
 | AI Inference | Python + YOLOv11/PT | Google Cloud Run |
-| Admin Web | Nuxt 3 + Tailwind CSS | Netlify |
+| Admin Web | Sveltekit + Tailwind 4 | Netlify |
 | Auth & DB | Supabase (PostgreSQL) | Supabase Cloud |
 | File Storage | Google Cloud Storage | GCS Buckets |
 
@@ -37,10 +37,9 @@ A smart e-waste collection and management system powered by AI-based classificat
 - PyTorch regression .pt model (for price estimation)
 
 ### Frontend Admin
-- Nuxt 3 (Vue 3 + Composition API)
+- Sveltekit (Svelte 5)
 - Tailwind CSS v4
-- ShadcnUI-vue (modern UI components)
-- Pinia (state management)
+- ShadcnUI-svelte (modern UI components
 - Supabase client (auth & session)
 
 ### Deployment
@@ -69,7 +68,7 @@ A smart e-waste collection and management system powered by AI-based classificat
 | Folder | Description |
 |--------|-------------|
 | backend/ | All backend routes, controllers, and services |
-| frontend-admin/ | Nuxt 3 admin dashboard with auth, tables, and forms |
+| frontend-admin/ | Svelte 5 admin dashboard with auth, tables, and forms |
 | ai-models/ | Python scripts for inference (YOLO & regression) |
 | infra/ | Cloud Run deployment setup, Dockerfiles, CI/CD configs |
 
@@ -130,9 +129,9 @@ cd ../frontend-admin && npm run dev
 
 - Supabase: https://supabase.com/docs
 - YOLO11: https://docs.ultralytics.com
-- Nuxt 3: https://nuxt.com
+- Svelte 5 : https://svelte.dev/docs/svelte/overview
 - Google Cloud Run: https://cloud.google.com/run
-- ShadcnUI-vue: https://www.shadcn-vue.com/
+- ShadcnUI-vue: https://next.shadcn-svelte.com/
 
 ## 👨‍💼 Contributors
 
