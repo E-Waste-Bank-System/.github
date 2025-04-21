@@ -152,17 +152,17 @@ cd ../object-classification-model && pip install -r requirements.txt
 
 ## 📚 References & Docs
 
-    [YOLOv11 Docs](https://docs.ultralytics.com/)
+[YOLOv11 Docs](https://docs.ultralytics.com/)
 
-    [Supabase Docs](https://supabase.com/docs)
+[Supabase Docs](https://supabase.com/docs)
 
-    [Next.js 15](https://nextjs.org/)
+[Next.js 15](https://nextjs.org/)
 
-    [Google Cloud Run](https://cloud.google.com/run)
+[Google Cloud Run](https://cloud.google.com/run)
 
-    [Tailwind CSS v4](https://tailwindcss.com/)
+[Tailwind CSS v4](https://tailwindcss.com/)
 
-    [ShadcnUI](https://ui.shadcn.com/)
+[ShadcnUI](https://ui.shadcn.com/)
 
 
 
