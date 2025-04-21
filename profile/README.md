@@ -39,16 +39,23 @@ cd <repo>
 ### 2. Install Depedencies
 
 #### Backend API
+```bash
 cd ebs-api && npm install
-
+```
 #### Admin Web
+```bash
 cd ../ebs-web && npm install
+```
 
 #### Regression Model
+```bash
 cd ../regression-model && pip install -r requirements.txt
+```
 
 ### Classification Model
+```bash
 cd ../object-classification-model && pip install -r requirements.txt
+```
 
 ## 🔁 System Flow (Diagram)
 ```
