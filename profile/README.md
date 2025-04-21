@@ -123,6 +123,7 @@ cd ../object-classification-model && pip install -r requirements.txt
 
     Authentication using Supabase
 
+---
 
 ## 📊 Admin Dashboard Features
 📥 View & Approve e-waste submissions
@@ -145,6 +146,8 @@ cd ../object-classification-model && pip install -r requirements.txt
 🗓️ Schedule pickup
 
 📍 Check status
+
+---
 
 ## 🛠️ Contributors
 ```
