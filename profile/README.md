@@ -36,8 +36,6 @@ git clone https://github.com/E-Waste-Bank-System/<repo>
 cd <repo>
 ```
 
----
-
 ### 2. Install Depedencies
 
 #### Backend API
@@ -51,8 +49,6 @@ cd ../regression-model && pip install -r requirements.txt
 
 ### Classification Model
 cd ../object-classification-model && pip install -r requirements.txt
-
----
 
 ## 🔁 System Flow (Diagram)
 ```
@@ -121,6 +117,52 @@ cd ../object-classification-model && pip install -r requirements.txt
     Authentication using Supabase
 
 
+## 📊 Admin Dashboard Features
+📥 View & Approve e-waste submissions
+
+👥 Manage Users (Ban/Unban)
+
+📚 Manage Articles (Tips & News)
+
+📈 View Reports (Transactions & Waste Records)
+
+⚙️ Price Category Management
+
+## 📱 Mobile App Features
+📸 Upload e-waste image
+
+📦 See classification result
+
+💰 Estimate price dynamically
+
+🗓️ Schedule pickup
+
+📍 Check status
+
+## 🛠️ Contributors
+```
+| Name                      | Role                                               |
+|---------------------------|----------------------------------------------------|
+| Aldo Nitehe Lase          | 	Mobile App & Regression Model Developer           |
+| Axel David                | 	Backend Engineer & CV Model Developer             |
+| Farhan Rizki Fauzi        | 	UI/UX Designer & Web Developer                    |
+```
+
+---
+
+## 📚 References & Docs
+
+    [YOLOv11 Docs](https://docs.ultralytics.com/)
+
+    [Supabase Docs](https://supabase.com/docs)
+
+    [Next.js 15](https://nextjs.org/)
+
+    [Google Cloud Run](https://cloud.google.com/run)
+
+    [Tailwind CSS v4](https://tailwindcss.com/)
+
+    [ShadcnUI](https://ui.shadcn.com/)
 
 
 
