@@ -21,7 +21,7 @@ A smart e-waste collection and management system powered by AI-based classificat
 | REST API             | TypeScript + Express             | Google Cloud Run         |
 | AI Inference         | Python (YOLOv11, Regression)     | Google Cloud Run         |
 | Admin Dashboard      | Next.js 15 + Tailwind + ShadcnUI | Vercel / Netlify         |
-| Mobile App           | Kotlin (Native Android)          | Google Play (TBD)        |
+| Mobile App           | Kotlin (Native Android)          | APK Build                |
 | Auth & Database      | Supabase (PostgreSQL + Auth)     | Supabase Cloud           |
 | File & Model Storage | Google Cloud Storage (GCS)       | GCS Buckets              |
 
@@ -55,7 +55,7 @@ cd ../object-classification-model && pip install -r requirements.txt
 ---
 
 ## 🔁 System Flow (Diagram)
-
+```
 [Mobile App]
      ↓ Upload image
 [ebs-api] (Express)
@@ -64,6 +64,7 @@ cd ../object-classification-model && pip install -r requirements.txt
      ↓ Receive prediction + price
      → Store in Supabase (DB)
      → Upload image to GCS
+```
 
 ---
 
