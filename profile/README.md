@@ -155,7 +155,7 @@ cd ../object-classification-model && pip install -r requirements.txt
 |---------------------------|----------------------------------------------------|
 | Aldo Nitehe Lase          | 	Mobile App & Regression Model Developer           |
 | Axel David                | 	Backend Engineer & CV Model Developer             |
-| Farhan Rizki Fauzi        | 	UI/UX Designer & Web Developer                    |
+| Farhan Rizki Fauzi        | 	UI/UX Designer & Deploment                        |
 
 
 ---
