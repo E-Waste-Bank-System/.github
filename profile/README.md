@@ -74,11 +74,11 @@ A smart, full-stack platform for e-waste collection, classification, and managem
 
 ---
 
-## 📸 Dashboard Screenshots
+<!-- ## 📸 Dashboard Screenshots
 
 _Add screenshots of the dashboard and main features here_
 
----
+--- -->
 
 ## 👥 Contributors
 
