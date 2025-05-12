@@ -1,179 +1,104 @@
-# 📦 E-Waste Bank System
+# ♻️ E-Waste Bank System Monorepo
 
-A smart e-waste collection and management system powered by AI-based classification (YOLOv11) and regression-based price estimation. Users submit electronic waste (e-waste) via a mobile app, and administrators manage submissions, pricing, and content through a modern admin dashboard.
-
-## 🏐 Monorepo Structure
-
-```
-/bank-sampah-elektronik
- ├── ebs-api/ # Express.js Backend API (TypeScript)
- ├── ebs-web/ # Admin Web Dashboard (Next.js 15 + Tailwind + ShadcnUI)
- ├── ebs-app/ # Android Mobile App (Kotlin)
- ├── object-classification-model/ # Computer Vision Model (YOLOv11 - PyTorch)
- ├── regression-model/ # Price Estimation Model (Regression - PyTorch)
- └── README.md # Main documentation file
-```
-
-## 🌐 Live Services Overview
-
-| Service               | Tech Stack                      | Deployment Platform     |
-|----------------------|----------------------------------|--------------------------|
-| REST API             | TypeScript + Express             | Google Cloud Run         |
-| AI Inference         | Python (YOLOv11, Regression)     | Google Cloud Run         |
-| Admin Dashboard      | Next.js 15 + Tailwind + ShadcnUI | Vercel / Netlify         |
-| Mobile App           | Kotlin (Native Android)          | APK Build                |
-| Auth & Database      | Supabase (PostgreSQL + Auth)     | Supabase Cloud           |
-| File & Model Storage | Google Cloud Storage (GCS)       | GCS Buckets              |
+A smart, full-stack platform for e-waste collection, classification, and management. Combines AI-powered image classification, price estimation, a modern admin dashboard, and a user-friendly mobile app.
 
 ---
 
-## 🚀 Quickstart Development Guide
+## 🗂️ Monorepo Structure
 
-### 1. Clone Repository
-
-```bash
-git clone https://github.com/E-Waste-Bank-System/<repo>
-cd <repo>
 ```
-
-### 2. Install Depedencies
-
-#### Backend API
-```bash
-cd ebs-api && npm install
-```
-#### Admin Web
-```bash
-cd ../ebs-web && npm install
-```
-
-#### Regression Model
-```bash
-cd ../regression-model && pip install -r requirements.txt
-```
-
-### Classification Model
-```bash
-cd ../object-classification-model && pip install -r requirements.txt
-```
-
-## 🔁 System Flow (Diagram)
-```
-[Mobile App]
-     ↓ Upload image
-[ebs-api] (Express)
-     → [object-classification-model] (YOLOv11)
-     → [regression-model] (PyTorch)
-     ↓ Receive prediction + price
-     → Store in Supabase (DB)
-     → Upload image to GCS
+/ebs-system
+ ├── ebs-api/                   # Express.js Backend API (TypeScript)
+ ├── ebs-web/                   # Admin Web Dashboard (Next.js 15 + Tailwind + ShadcnUI)
+ ├── object-classification-model/# Computer Vision Model (YOLOv11 - PyTorch)
+ └── README.md                  # Main documentation file
 ```
 
 ---
 
-## 🧠 Tech Stack
+## 🚀 Quickstart
 
-🔹 Backend API
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/E-Waste-Bank-System/<repo>
+   cd <repo>
+   ```
 
-    Express.js (TypeScript)
+2. **Install dependencies for each service**
+   ```bash
+   cd ebs-api && npm install
+   cd ../ebs-web && npm install
+   cd ../object-classification-model/src && pip install -r requirements.txt
+   ```
 
-    Supabase SDK (Auth & DB)
+3. **Configure environment variables**
+   - See `.env.example` in each service for required variables.
 
-    Multer (file upload)
-
-    Google Cloud Storage
-
-    Python shell (child_process)
-
-🔹 CV Classification
-
-    YOLOv11 model (.pt)
-
-    Ultralytics
-
-    Flask (API serving)
-
-    Google Cloud Run
-
-🔹 Price Regression
-
-    PyTorch Regression Model (.pt)
-
-    Flask or FastAPI
-
-    Trained using e-waste data
-
-🔹 Admin Web Dashboard
-
-    Next.js 15 (App Router)
-
-    Tailwind CSS v4
-
-    ShadcnUI components
-
-    Supabase client (for session management)
-
-🔹 Mobile App
-
-    Kotlin Android App
-
-    Upload images, choose pickup date
-
-    View classified result and estimated price
-
-    Authentication using Supabase
+4. **Run services locally**
+   - **API:** `cd ebs-api && npm run dev`
+   - **Web:** `cd ../ebs-web && npm run dev`
+   - **Model:** `cd ../object-classification-model/src && python app.py`
 
 ---
 
-## 📊 Admin Dashboard Features
-📥 View & Approve e-waste submissions
+## ✨ Modern Dashboard UI/UX
 
-👥 Manage Users (Ban/Unban)
+- **Stat cards** for quick metrics
+- **Monthly detections chart** (Bar chart)
+- **Recent articles and detections**
+- **Personalized topbar** with greeting, date, user avatar, and theme switch
+- **Notification bell** (UI only, ready for integration)
+- **Responsive, mobile-friendly design**
+- **Powered by ebs-api backend**
 
-📚 Manage Articles (Tips & News)
-
-📈 View Reports (Transactions & Waste Records)
-
-⚙️ Price Category Management
-
-## 📱 Mobile App Features
-📸 Upload e-waste image
-
-📦 See classification result
-
-💰 Estimate price dynamically
-
-🗓️ Schedule pickup
-
-📍 Check status
+**Customizing the Dashboard UI:**
+- UI components: `ebs-web/components/ui/`
+- Topbar: `ebs-web/components/ui/topbar.tsx`
+- Stat cards & layout: `ebs-web/app/dashboard/page.tsx`
 
 ---
 
-## 🛠️ Contributors
+## 🧠 AI & Backend
+
+- **ebs-api:** REST API for authentication, articles, detections, validations, and statistics. Integrates with Supabase (PostgreSQL + Auth) and Google Cloud Storage.
+- **object-classification-model:** YOLOv11-based image classification for e-waste type detection. Exposes a Flask API for inference.
+- **Regression model:** (if present) Price estimation for e-waste items.
+
+---
+
+## 🔗 Integration
+
+- The **admin dashboard** (`ebs-web`) consumes endpoints from **ebs-api** for all management features.
+- **Authentication** is JWT-based (via Supabase Auth).
+- **AI model** is called by the API for image classification and price estimation.
+
+---
+
+## 📸 Dashboard Screenshots
+
+_Add screenshots of the dashboard and main features here_
+
+---
+
+## 👥 Contributors
 
 | Name                      | Role                                               |
 |---------------------------|----------------------------------------------------|
-| Aldo Nitehe Lase          | 	Mobile App & Regression Model Developer           |
-| Axel David                | 	Backend Engineer & CV Model Developer             |
-| Farhan Rizki Fauzi        | 	UI/UX Designer & Deployment                        |
-
+| Aldo Nitehe Lase          | Mobile App & Regression Model Developer            |
+| Axel David                | Backend Engineer & CV Model Developer              |
+| Farhan Rizki Fauzi        | UI/UX Designer & Deployment                        |
 
 ---
 
-## 📚 References & Docs
+## 📚 References
 
-[YOLOv11 Docs](https://docs.ultralytics.com/)
+- [YOLOv11 Docs](https://docs.ultralytics.com/)
+- [Supabase Docs](https://supabase.com/docs)
+- [Next.js 15](https://nextjs.org/)
+- [Google Cloud Run](https://cloud.google.com/run)
+- [Tailwind CSS v4](https://tailwindcss.com/)
+- [ShadcnUI](https://ui.shadcn.com/)
 
-[Supabase Docs](https://supabase.com/docs)
+---
 
-[Next.js 15](https://nextjs.org/)
-
-[Google Cloud Run](https://cloud.google.com/run)
-
-[Tailwind CSS v4](https://tailwindcss.com/)
-
-[ShadcnUI](https://ui.shadcn.com/)
-
-
-
-                                
+**For detailed setup and usage, see the README in each subdirectory.**
