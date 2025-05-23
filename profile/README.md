@@ -44,13 +44,22 @@ A smart, full-stack platform for e-waste collection, classification, and managem
 ---
 
 ## 📱 Mobile App
-- **React Native:** Cross-platform mobile application for e-waste collection
+- **Kotlin + Jetpack Compose:** Native Android application for e-waste collection
 - **Features:** 
   - Camera integration for e-waste scanning
   - Real-time price estimation
   - Collection scheduling
   - User profile & history
   - Push notifications
+
+## 🖥️ Web Dashboard
+- **Next.js 15 + Tailwind + ShadcnUI:** Modern admin dashboard for e-waste management
+- **Features:**
+  - Real-time analytics and reporting
+  - E-waste inventory management
+  - User management and permissions
+  - Collection scheduling oversight
+  - Price management and history
 
 ## 🧠 AI 
 - **E-Waste Detection Model:** YOLOv11-based image classification for e-waste type detection. Exposes a Flask API for inference.
@@ -61,9 +70,9 @@ A smart, full-stack platform for e-waste collection, classification, and managem
 
 ## 🔗 Integration
 
-- The **admin dashboard** and **mobile app** consumes endpoints from **backend api** for all management features.
+- The **admin dashboard** and **mobile app** consume endpoints from the **backend API** for all management features.
 - **Authentication** is JWT-based (via Supabase Auth).
-- **AI model** is called by the API for image classification and price estimation.
+- The **AI model** is called by the API for image classification and price estimation.
 
 ---
 
