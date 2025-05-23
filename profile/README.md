@@ -1,4 +1,4 @@
-# ♻️ E-Waste Bank System Monorepo
+# ♻️ E-Waste Hub
 
 A smart, full-stack platform for e-waste collection, classification, and management. Combines AI-powered image classification, price estimation, a modern admin dashboard, and a user-friendly mobile app.
 
