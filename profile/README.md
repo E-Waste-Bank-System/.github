@@ -8,9 +8,10 @@ A smart, full-stack platform for e-waste collection, classification, and managem
 
 ```
 /ebs-system
- ├── ebs-api/                   # Express.js Backend API (TypeScript)
+ ├── ebs-app/                   # Mobile Application
  ├── ebs-web/                   # Admin Web Dashboard (Next.js 15 + Tailwind + ShadcnUI)
- ├── object-classification-model/# Computer Vision Model (YOLOv11 - PyTorch)
+ ├── ebs-api/                   # Express.js Backend API (TypeScript)
+ ├── ebs-ai/                    # Computer Vision Model (YOLOv11 - PyTorch)
  └── README.md                  # Main documentation file
 ```
 
@@ -28,7 +29,7 @@ A smart, full-stack platform for e-waste collection, classification, and managem
    ```bash
    cd ebs-api && npm install
    cd ../ebs-web && npm install
-   cd ../object-classification-model/src && pip install -r requirements.txt
+   cd ../ebs-ai/src && pip install -r requirements.txt
    ```
 
 3. **Configure environment variables**
@@ -37,38 +38,30 @@ A smart, full-stack platform for e-waste collection, classification, and managem
 4. **Run services locally**
    - **API:** `cd ebs-api && npm run dev`
    - **Web:** `cd ../ebs-web && npm run dev`
-   - **Model:** `cd ../object-classification-model/src && python app.py`
+   - **Mobile:** Open `ebs-app` in Android Studio and run the app
+   - **Model:** `cd ../ebs-ai/src && python app.py`
 
 ---
 
-## ✨ Modern Dashboard UI/UX
+## 📱 Mobile App
+- **React Native:** Cross-platform mobile application for e-waste collection
+- **Features:** 
+  - Camera integration for e-waste scanning
+  - Real-time price estimation
+  - Collection scheduling
+  - User profile & history
+  - Push notifications
 
-- **Stat cards** for quick metrics
-- **Monthly detections chart** (Bar chart)
-- **Recent articles and detections**
-- **Personalized topbar** with greeting, date, user avatar, and theme switch
-- **Notification bell** (UI only, ready for integration)
-- **Responsive, mobile-friendly design**
-- **Powered by ebs-api backend**
-
-**Customizing the Dashboard UI:**
-- UI components: `ebs-web/components/ui/`
-- Topbar: `ebs-web/components/ui/topbar.tsx`
-- Stat cards & layout: `ebs-web/app/dashboard/page.tsx`
-
----
-
-## 🧠 AI & Backend
-
-- **ebs-api:** REST API for authentication, articles, detections, validations, and statistics. Integrates with Supabase (PostgreSQL + Auth) and Google Cloud Storage.
-- **object-classification-model:** YOLOv11-based image classification for e-waste type detection. Exposes a Flask API for inference.
-- **Regression model:** (if present) Price estimation for e-waste items.
+## 🧠 AI 
+- **E-Waste Detection Model:** YOLOv11-based image classification for e-waste type detection. Exposes a Flask API for inference.
+- **Regression model:** Price estimation for e-waste items.
+- **Gemini:** AI-powered assistant for e-waste information and guidance
 
 ---
 
 ## 🔗 Integration
 
-- The **admin dashboard** (`ebs-web`) consumes endpoints from **ebs-api** for all management features.
+- The **admin dashboard** and **mobile app** consumes endpoints from **backend api** for all management features.
 - **Authentication** is JWT-based (via Supabase Auth).
 - **AI model** is called by the API for image classification and price estimation.
 
@@ -92,6 +85,7 @@ _Add screenshots of the dashboard and main features here_
 
 ## 📚 References
 
+- [Jetpack Compose](https://developer.android.com/develop/ui/compose/documentation)
 - [YOLOv11 Docs](https://docs.ultralytics.com/)
 - [Supabase Docs](https://supabase.com/docs)
 - [Next.js 15](https://nextjs.org/)
